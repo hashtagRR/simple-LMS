@@ -1,0 +1,32 @@
+BTL - security blue team
+
+Mitre attack framework - PPTS - how to detect
+
+Lokheed martin kill chain
+
+SIEM 
+
+agent types- agentless / agent
+
+company > correction point > Managed service
+
+cyberark
+
+FIM - file integrity monitoring.
+
+TIP - avlien vault(free), palo alto (free)
+      record future (commercial)
+
+
+Staxii, stix 
+
+bright talk - register
+
+
+
+
+
+
+Security+
+https://mega.nz/#!x1BjiIbC
+HxBhzU5ECQwmT_HCviMgRrZsmXOvGzDvf1fARN3RndM
