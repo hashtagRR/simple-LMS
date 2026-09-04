@@ -2,7 +2,7 @@
 
 A desktop Library Management System built as a Java Swing application
 (NetBeans project) backed by a MySQL database via JDBC. No particular
-OOP design or security was a goal here — the point of the project was
+OOP design or security was a goal here. The point of the project was
 implementing the internal functions a library system needs (borrowing,
 returns, reservations, fines, etc.), not code architecture.
 
@@ -32,34 +32,34 @@ to one of two home screens:
   - Change Password (`Member_Change_password.java`)
 
 `src/DB_con/SQLCON.java` opens the JDBC connection (hardcoded to
-`jdbc:mysql://localhost:3306/library_db`, user `root`, password `1234`) —
-update this if your local MySQL credentials differ. No `.sql` schema file
+`jdbc:mysql://localhost:3306/library_db`, user `root`, password `1234`).
+Update this if your local MySQL credentials differ. No `.sql` schema file
 is included in the repo; the required tables (`admin`, `member`, and
 whatever backs books/loans/reservations/fines) are inferred from the
 queries in `src/gui/*.java` but not shipped as a dump.
 
 ## Project layout
 
-- `build.xml` — Ant build script (NetBeans-generated; imports
+- `build.xml`: Ant build script (NetBeans-generated; imports
   `nbproject/build-impl.xml`), the real way to build this project.
-- `nbproject/` — NetBeans project metadata used by the Ant build.
-- `manifest.mf` — JAR manifest stub (NetBeans fills in `Main-Class` at
+- `nbproject/`: NetBeans project metadata used by the Ant build.
+- `manifest.mf`: JAR manifest stub (NetBeans fills in `Main-Class` at
   build time).
-- `src/DB_con/SQLCON.java` — the single JDBC connection helper.
-- `src/gui/` — all Swing forms (`.java` + matching NetBeans `.form` files)
+- `src/DB_con/SQLCON.java`: the single JDBC connection helper.
+- `src/gui/`: all Swing forms (`.java` + matching NetBeans `.form` files)
   and icons used by the UI.
-- `build.zip` — a zipped copy of a previous Ant build output, checked into
-  the repo; it is not needed to build the project (Ant regenerates
+- `build.zip`: a zipped copy of a previous Ant build output, checked into
+  the repo. It is not needed to build the project (Ant regenerates
   `build/` and `dist/` from source) and is left as-is here since this pass
   is documentation-only.
 
 ## Running it
 
 1. Install a JDK, Apache Ant, and MySQL (a MySQL Connector/J JAR needs to
-   be on the classpath — NetBeans normally manages this via the project's
+   be on the classpath. NetBeans normally manages this via the project's
    library references in `nbproject/project.properties`).
 2. Create a `library_db` MySQL database with the tables the code expects
-   (`admin`, `member`, plus book/loan/reservation/fine tables — no schema
+   (`admin`, `member`, plus book/loan/reservation/fine tables; no schema
    dump is included, so these need to be created by hand based on the
    queries in `src/gui/`).
 3. Update the connection details in `src/DB_con/SQLCON.java` if your MySQL
